@@ -1,0 +1,25 @@
+<html>
+
+<script src="https://seagate--dev2.sandbox.my.site.com/seagatedirect/lightning/lightning.out.js"></script>
+
+<div id="lightningLocator">
+
+</div>
+
+<script>
+    $Lightning.use("c:TsetLightningOut",    // name of the Lightning app
+        function() {                  // Callback once framework and app loaded
+            $Lightning.createComponent(
+                "c:TestComp", // top-level component of your app
+                { },                  // attributes to set on the component when created
+                "lightningLocator",   // the DOM location to insert the component
+                function(cmp) {
+                    // callback when component is created and active on the page
+                }
+            );
+        },
+        'https://seagate--dev2.sandbox.my.site.com/seagatedirect'  // Experience Cloud site endpoint
+    );
+</script>
+
+</html>
